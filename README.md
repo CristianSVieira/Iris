@@ -1,2 +1,9 @@
-# Iris
-E-Commerce "multi-côr"
+# Iris, comércio digital "multi-côr"
+
+Iris é um e-commerce que trata especialmente cada uma das categorias de seus produtos. Cada um tem uma côr, uma personalidade. 
+
+E-commerces tendem a ter sistemas de recomendações e sugestões problemáticos, que geralmente trazem resultados que não foram os procurados inicialmente pelo utilizador. São feitos dessa maneira para que possam vender aquilo que é mais comumente procurado pelas pessoas, que são os itens com maiores chances de serem vendidos. No entanto, isso gera um experiência ruím de compra, onde o usuário pode encontrar muitas dificuldades de encontrar certos produtos, principalmente de nichos.
+
+Um exemplo muito comúm está em equipamentos e utilitários que exigem manutenção recorrente, ou são desenhados de maneira modulares para que possam ser mais facilmente reparados, ex.: automotores e eletrônicos. Ao buscar por um veículo, ou modelo específico de eletrônico, é mais fácil que acabe por encontrar peças ou acessórios feitos para o aparelho, ao invés do aparelho em si. Isso é um problema de categorização, as plataformas não pesquisam em âmbitos, mas por generalidades. As categorias de produtos existem, é possível que se façam pesquisas filtradas neste sentido, mas ainda assim outro problema é muito comúm de ocorrer devido à inconsistência de dados. Aparelhos como estes possuem diversas configurações, modelos com minúcias específicas e, por vezes, sequer quem anuncia sabe diferenciá-los e acaba por cadastrá-los de maneira indevida nos sistemas, seja por este caso (desconhecimento) ou por malícia (para enganar o algorítmo, em sentido de impulsionar a venda, como colocar o ano do modelo como mais novo do que realmente é, ou usar por características que sabe que são mais buscadas para aquele produto, mesmo não sendo fidedigna).
+
+A Iris busca solucionar este problema de maneira categórico, com sistemas diferenciais de apresentação de produtos e para a sua inserção na plataforma. 
