@@ -1,0 +1,170 @@
+html, body {
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+body {
+    display: flex; 
+    flex-direction: column;
+    flex: 1;
+
+    max-width: 100vw;
+    max-height: 100vh;
+
+    transition: background-color 0.3s ease-in-out;
+}
+
+.main {
+    display: flex;
+    flex: 1 0 auto;
+
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    background-color: #4CAF50;
+
+    display: flex;
+    align-items: center;
+
+    flex: 1 0 auto;
+    height: 6%;
+
+    padding-left: 1em;
+}
+
+.logo {
+    height: 20px;
+    width: 20px;
+
+    background-color: white;
+    transform: rotateZ(45deg);
+
+    margin-right: 1em;
+}
+
+.header__controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+}
+
+.toggle {
+    background-color: transparent;
+
+    position: relative;
+    top: 0;
+    left: 0;
+    border: none;
+    cursor: pointer;
+
+    color: #f0f0f0;
+}
+
+#toggle-button {
+    @extend .toggle;
+}
+
+#untoggle-button {
+    @extend .toggle;
+}
+
+//#toggle-button:focus + #categories {
+//    left: 0%; // Show categories when the button is focused
+//}
+
+.search {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    justify-self: center;
+    align-self: center;
+    
+    background-color: #f0f0f05a;
+    border-radius: 5px;
+    flex: 1;
+
+    margin: 0 3em;
+}
+
+#search_bar {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    flex-grow: 1; // Allow the search bar to grow
+
+    text-align: center;
+}
+
+#search_button {
+    background-color: #d8d8d8;
+    border: none;
+    cursor: pointer;
+}
+
+
+#categories {
+    outline: none;
+    position: absolute;
+    left: -125%;
+    top: 0%;
+    transition: left 1s ease-in-out; // Add a transition to the element itself
+    z-index: 1000; // Ensure the element is above other elements
+    height: 100%;
+    max-height: 100%;
+
+    width: 10%;
+    text-wrap: normal;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    display: flex;
+    flex-direction: column;
+
+    border: none;
+}
+
+#categories_container {
+    outline: none;
+    transition: left 1s ease-in-out; // Add a transition to the element itself
+    height: 100%;
+    max-height: 100%;
+
+    border: none;
+
+    display: flex;
+    flex-direction: column;
+    flex-flow: column wrap;
+    flex-grow: 1;
+    align-items: stretch;
+
+    text-align: left;
+
+    overflow-y: auto;
+}
+
+//#categories:focus {
+//    left: 0%; // Move the element to the right when the popover is open
+//}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding-left: 1em;
+
+    color: white;
+    flex: 3;
+}
