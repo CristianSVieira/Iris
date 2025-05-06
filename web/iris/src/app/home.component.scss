@@ -5,6 +5,8 @@ html, body {
     width: 100%;
     height: 100%;
     overflow: auto;
+
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 body {
@@ -26,6 +28,8 @@ body {
 
     padding: 0;
     margin: 0;
+
+    max-height: 100%;
 }
 
 .header {
@@ -52,7 +56,7 @@ body {
 
 .logotipo {
     color: white;
-    font-size: 14pt;
+    font-size: 12pt;
 }
 
 .header__controls {
@@ -147,7 +151,7 @@ body {
 
     width: 10%;
     text-wrap: normal;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
 
     display: flex;
     flex-direction: column;
@@ -189,19 +193,148 @@ body {
     flex: 3;
 }
 
-.produtos {
+.results {
     display: flex;
+    flex-direction: row;
 
-    background-color: #f0f0f0;
+    background-color: rgba(255, 255, 255, 0.9);
 
-    flex-grow: 1;
+    flex-grow: 0;
     flex-shrink: 1;
     flex-basis: auto;
 
     justify-content: center;
+
+    border-radius: 0.2em;
+    margin: 0.4em;
+    padding: 1em;
+
+    gap: 0.8em;
+
+    height: 100%;
+    max-height: 100%;
+
+    overflow: hidden;
+}
+
+.ordenator {
+    background-color: #f0f0f0;
+
+    display: flex;
+    flex-direction: row;
+
+    border-radius: 0.4em;
+
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 20%;
+
+    max-width: 60%;
+    max-height: 100%;
+
+    overflow-y: scroll; /* enable scrolling */
+}
+
+.products {
+    display: flex;
+    flex-direction: row;
+
+    border-radius: 0.4em;
+
     align-items: center;
 
-    border-radius: 12px;
-    margin: 0.5%;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    flex-wrap: wrap; /* flex-wrap so at the end of the screen, creating a new row of products */
+    gap: 0.8em;
+
+    height: auto;
+
+    max-width: 60%;
+    max-height: 100%;
+
+    overflow-y: scroll; /* enable scrolling */
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 25%;
+    
+    background-color: #f0f0f0;
+
+    // padding: 0.5%;
+
+    border-radius: 0.4em;
+
+    height: 50%;
+    width: 13%;
+}
+
+.product__images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* no scrollbars */
+
+    width: 100%;
+
+    border-radius: 0.4em;
+}
+
+.product__image {
+    display: flex;
+    flex: 0 0 auto;
+
+    width: 100%; 
     height: 100%;
+    aspect-ratio: 1 / 1; /* makes a square out of the image */
+    object-fit: cover; /* fill the container */
+}
+
+.product__header {
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+    flex-grow: 1;
+    height: 40%;
+
+    padding: 1em;
+}
+
+.product__title {
+    color: gray;
+    font-size: 10pt;
+}
+
+.product__price {
+    color: black;
+    font-size: 14pt;
+}
+
+.product__location {
+    color: darkgray;
+    font-size: 10pt;
+}
+
+.filters {
+    background-color: #f0f0f0;
+
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 0.4em;
+
+    justify-content: center;
+
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+
+    max-width: 60%;
+    max-height: 100%;
+
+    overflow-y: scroll; /* enable scrolling */
 }
