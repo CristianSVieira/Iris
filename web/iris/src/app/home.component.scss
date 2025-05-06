@@ -22,6 +22,8 @@ body {
     display: flex;
     flex: 1 0 auto;
 
+    flex-direction: column;
+
     padding: 0;
     margin: 0;
 }
@@ -39,13 +41,18 @@ body {
 }
 
 .logo {
-    height: 20px;
-    width: 20px;
+    height: 24px;
+    width: 24px;
 
     background-color: white;
     transform: rotateZ(45deg);
 
     margin-right: 1em;
+}
+
+.logotipo {
+    color: white;
+    font-size: 14pt;
 }
 
 .header__controls {
@@ -84,34 +91,47 @@ body {
 .search {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
-
     justify-self: center;
     align-self: center;
     
-    background-color: #f0f0f05a;
-    border-radius: 5px;
-    flex: 1;
+    flex: 1 0 auto;
 
-    margin: 0 3em;
+    margin-left: 3em;
+    margin-right: 3em;
+
+    height: 2em;
 }
 
 #search_bar {
-    border: none;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.5);
+    border-style: solid;
+    border-radius: 8px 0px 0px 8px;
+
+    background-color: #f0f0f05a;
+
     outline: none;
-    background-color: transparent;
     color: white;
     font-size: 16px;
-    flex-grow: 1; // Allow the search bar to grow
+    flex: 1 0 auto;
 
-    text-align: center;
+    text-align: left;
+    padding-left: 1em;
+}
+
+#search_bar::placeholder {
+    color: #d8d8d8;
+    opacity: 0.6;
 }
 
 #search_button {
-    background-color: #d8d8d8;
+    border-radius: 0px 8px 8px 0px;
+    background-color: #ffffff;
     border: none;
     cursor: pointer;
+
+    width: 6em;
+    height: 100%;
 }
 
 
@@ -167,4 +187,21 @@ body {
 
     color: white;
     flex: 3;
+}
+
+.produtos {
+    display: flex;
+
+    background-color: #f0f0f0;
+
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 12px;
+    margin: 0.5%;
+    height: 100%;
 }

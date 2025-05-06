@@ -1,7 +1,7 @@
 <main class="main">
     <div class="header">
         <div class="logo"></div>
-        <a href="#categories"><button id="toggle-button" aria-controls="categories" (click)="handleClick($event)" #toggleButton>IRIS</button></a>
+        <a href="#categories"><button id="toggle-button" class="logotipo" aria-controls="categories" (click)="handleClick($event)" #toggleButton>IRIS</button></a>
         <div class="header__controls">
 
             <div class="search">
@@ -14,7 +14,7 @@
     <div id="categories" #categories>
         <div class="header">
             <div class="logo"></div>
-            <a href="#categories"><button id="untoggle-button" aria-controls="categories" (click)="handleClick($event)" #untoggleButton>IRIS</button></a>
+            <a href="#categories"><button id="untoggle-button" class="logotipo" aria-controls="categories" (click)="handleClick($event)" #untoggleButton>IRIS</button></a>
         </div>
         
         <div id="categories_container" tabindex="-1" #categoriesContainer>
@@ -25,6 +25,10 @@
             <div class="category" style="background-color: #800080;" #category><span>Musicais</span></div>
             <div class="category" style="background-color: #00BFFF;" #category><span>Esportivos</span></div>
         </div>
+    </div>
+    
+    <div class="produtos">
+        <h1>PRODUTO</h1>
     </div>
 </main>
 

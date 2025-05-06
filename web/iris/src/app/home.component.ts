@@ -1,4 +1,5 @@
-import { AfterViewInit, Component, ElementRef, QueryList, ViewChild, ViewChildren, ViewEncapsulation } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Inject, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import { ViewEncapsulation } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
@@ -16,7 +17,7 @@ export class HomeComponent implements AfterViewInit {
   @ViewChildren('category') category!: QueryList<ElementRef>;
   @ViewChild('body') body!: ElementRef;
 
-  constructor(private elementRef: ElementRef) {
+  constructor(@Inject(ElementRef) private elementRef: ElementRef) {
     console.log('HomeComponent constructor');
   }
 
@@ -29,7 +30,7 @@ export class HomeComponent implements AfterViewInit {
     this.untoggleButton.nativeElement.addEventListener('click', (event: MouseEvent) => {
       console.log('untoggleButton clicked');
       this.categories.nativeElement.style.left = '-125%';
-      this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = 'white';
+      // this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = 'white';
     });
 
     this.category.forEach((_category: ElementRef) => {
