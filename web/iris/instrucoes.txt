@@ -1,0 +1,6 @@
+Com o nodejs/NPM instalado, execute:
+
+npm install
+npm start
+
+só.

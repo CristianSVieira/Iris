@@ -88,6 +88,10 @@ body {
     @extend .toggle;
 }
 
+.accent-color {
+    background-color: none;
+}
+
 //#toggle-button:focus + #categories {
 //    left: 0%; // Show categories when the button is focused
 //}
@@ -159,7 +163,7 @@ body {
     border: none;
 }
 
-#categories_container {
+#categories__container {
     outline: none;
     transition: left 1s ease-in-out; // Add a transition to the element itself
     height: 100%;
@@ -175,22 +179,58 @@ body {
 
     text-align: left;
 
-    overflow-y: auto;
+    overflow-y: scroll;
+    scrollbar-width: none;
 }
 
 //#categories:focus {
 //    left: 0%; // Move the element to the right when the popover is open
 //}
 
+.category__container {
+    display: flex;
+    flex-direction: column;
+
+    padding: 0.8em;
+
+    background-color: white;
+    transition: background-color 0.3s ease-in-out;
+
+    cursor: pointer;
+    flex: 3;
+}
+
 .category {
     display: flex;
     flex-direction: column;
     justify-content: center;
 
-    padding-left: 1em;
+    color: gray;
+    flex: 1 0 auto;
+}
 
-    color: white;
-    flex: 3;
+.category__tagColor {
+    flex: 0 0 4%;
+}
+
+.results__container {
+    transition: background-color 0.3s ease-in-out;
+
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+
+    justify-content: center;
+
+    border-radius: 0.8em;
+    margin: 0.8em;
+
+    height: 100%;
+    max-height: 100%;
+
+    overflow: hidden;
 }
 
 .results {
@@ -198,6 +238,7 @@ body {
     flex-direction: row;
 
     background-color: rgba(255, 255, 255, 0.9);
+    transition: background-color 0.3s ease-in-out;
 
     flex-grow: 0;
     flex-shrink: 1;
@@ -205,8 +246,6 @@ body {
 
     justify-content: center;
 
-    border-radius: 0.2em;
-    margin: 0.4em;
     padding: 1em;
 
     gap: 0.8em;
@@ -218,7 +257,7 @@ body {
 }
 
 .ordenator {
-    background-color: #f0f0f0;
+    background-color: white;
 
     display: flex;
     flex-direction: row;
@@ -257,70 +296,8 @@ body {
     overflow-y: scroll; /* enable scrolling */
 }
 
-.product {
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 25%;
-    
-    background-color: #f0f0f0;
-
-    // padding: 0.5%;
-
-    border-radius: 0.4em;
-
-    height: 50%;
-    width: 13%;
-}
-
-.product__images {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; /* no scrollbars */
-
-    width: 100%;
-
-    border-radius: 0.4em;
-}
-
-.product__image {
-    display: flex;
-    flex: 0 0 auto;
-
-    width: 100%; 
-    height: 100%;
-    aspect-ratio: 1 / 1; /* makes a square out of the image */
-    object-fit: cover; /* fill the container */
-}
-
-.product__header {
-    display: flex;
-    flex-direction: column;
-    
-    justify-content: center;
-    flex-grow: 1;
-    height: 40%;
-
-    padding: 1em;
-}
-
-.product__title {
-    color: gray;
-    font-size: 10pt;
-}
-
-.product__price {
-    color: black;
-    font-size: 14pt;
-}
-
-.product__location {
-    color: darkgray;
-    font-size: 10pt;
-}
-
 .filters {
-    background-color: #f0f0f0;
+    background-color: white;
 
     display: flex;
     flex-direction: column;
@@ -337,4 +314,11 @@ body {
     max-height: 100%;
 
     overflow-y: scroll; /* enable scrolling */
+}
+
+.results__accentColor {
+    background-color: none;
+    flex: 0 0 1%;
+
+    transition: background-color 0.3s ease-in-out;
 }

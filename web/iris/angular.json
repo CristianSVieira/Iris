@@ -33,7 +33,8 @@
             ],
             "styles": [
               "src/styles.scss",
-              "src/app/home.component.scss"
+              "src/app/home.component.scss",
+              "src/app/product.component.scss"
             ],
             "scripts": [],
             "server": "src/main.server.ts",
@@ -98,7 +99,8 @@
             ],
             "styles": [
               "src/styles.scss",
-              "src/app/home.component.scss"
+              "src/app/home.component.scss",
+              "src/app/product.component.scss"
             ],
             "scripts": []
           }

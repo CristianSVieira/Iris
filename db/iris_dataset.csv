@@ -1,0 +1,141 @@
+product_id,product_title,product_price,category,seller_id,seller_name,delivery_status,delivery_destination
+50,"Limpador de Carburador",29.9000,automotivos,28,"AutoCenter Rio","Em trânsito",Paraná
+44,"Óleo de Motor 5W30",49.9000,automotivos,28,"AutoCenter Rio","Em processamento",Acre
+56,"Calha de Chuva",119.0000,automotivos,28,"AutoCenter Rio",Entregue,Paraná
+59,"Aditivo Radiador",42.5000,automotivos,4,"AutoPeças Oliveira",Obstruído,"São Paulo"
+47,"Pneu Aro 15",349.0000,automotivos,4,"AutoPeças Oliveira","Em processamento",Acre
+41,"Kit de Freios ABS Hinor",399.9900,automotivos,4,"AutoPeças Oliveira",Obstruído,"Santa Catarina"
+53,"Central Multimídia",799.0000,automotivos,4,"AutoPeças Oliveira",Entregue,"São Paulo"
+52,"Lampada H7",39.9000,automotivos,12,AutoPerformance,Entregue,"Santa Catarina"
+58,"Inflador Portátil",149.0000,automotivos,12,AutoPerformance,"Em processamento","Minas Gerais"
+46,"Bateria Automotiva",499.0000,automotivos,12,AutoPerformance,"Em processamento","Rio Grande do Sul"
+54,"Capa de Volante",59.9000,automotivos,20,"Mecânica Paulista",Cancelado,"São Paulo"
+60,"Cera Automotiva",79.9000,automotivos,20,"Mecânica Paulista",Entregue,Acre
+48,"Câmera de Ré",129.9000,automotivos,20,"Mecânica Paulista",Obstruído,"Santa Catarina"
+42,"Capacete G7",599.9900,automotivos,20,"Mecânica Paulista",Obstruído,Acre
+45,"Limpador de Parabrisa",19.9000,automotivos,44,"Oficina Master",Entregue,"São Paulo"
+51,"Cabo de Seta",45.0000,automotivos,44,"Oficina Master",Obstruído,Paraná
+57,"Cadeira Infantil",399.9000,automotivos,44,"Oficina Master",Entregue,"São Paulo"
+55,"Desembaçador Traseiro",35.0000,automotivos,36,"Pneus & Acessórios",Cancelado,Paraná
+43,"Suporte de Celular Veicular",39.9900,automotivos,36,"Pneus & Acessórios",Cancelado,"Rio Grande do Sul"
+49,"Tapete Automotivo",89.9000,automotivos,36,"Pneus & Acessórios","Em processamento","Rio Grande do Sul"
+139,Santana,23800.0000,automotores,8,"Carros Clássicos BR","Em processamento","Rio Grande do Sul"
+127,"Corcel II",27400.0000,automotores,8,"Carros Clássicos BR","Em processamento","Espirito Santo"
+121,"Fusca 1300",29900.0000,automotores,8,"Carros Clássicos BR",Entregue,"Rio Grande do Sul"
+133,Variant,32700.0000,automotores,8,"Carros Clássicos BR",Cancelado,Paraná
+131,"Fiat 147",16900.0000,automotores,40,"Classic Garage",Obstruído,"São Paulo"
+137,Dodginho,48200.0000,automotores,40,"Classic Garage","Em processamento","Espirito Santo"
+125,"Maverick GT",68900.0000,automotores,40,"Classic Garage",Entregue,"Santa Catarina"
+135,Miura,29500.0000,automotores,24,"Colecionadores de Carros","Em trânsito","Rio Grande do Sul"
+123,"Opala Comodoro",41500.0000,automotores,24,"Colecionadores de Carros",Cancelado,Goiânia
+129,"Kombi Standard",43600.0000,automotores,24,"Colecionadores de Carros","Em processamento",Acre
+138,"Fiat Oggi",16300.0000,automotores,48,"Fusca Mania",Obstruído,Paraná
+132,"Del Rey Belina",18900.0000,automotores,48,"Fusca Mania","Em processamento","Minas Gerais"
+126,"Gurgel X12",23500.0000,automotores,48,"Fusca Mania",Obstruído,"Santa Catarina"
+122,"Chevette Tubarão",28500.0000,automotores,16,"Veículos Antigos",Entregue,Goiânia
+140,Veraneio,57400.0000,automotores,16,"Veículos Antigos",Entregue,Acre
+134,"Galaxie 500",61900.0000,automotores,16,"Veículos Antigos","Em processamento","Espirito Santo"
+128,"Dodge Charger R/T",75200.0000,automotores,16,"Veículos Antigos",Cancelado,"Minas Gerais"
+124,Brasília,18700.0000,automotores,32,"Vintage Motors",Cancelado,Goiânia
+136,"Chevy 500",45300.0000,automotores,32,"Vintage Motors",Obstruído,"Minas Gerais"
+130,"Puma GTE",53800.0000,automotores,32,"Vintage Motors","Em processamento","Minas Gerais"
+17,Energético,10.0000,bebida,50,"Bebidas Artesanais",Cancelado,"Rio Grande do Sul"
+11,Gatorade,4.0000,bebida,2,"Bebidas do Carlos","Em trânsito","Rio Grande do Sul"
+16,"Chá Gelado",7.5000,bebida,34,"Bebidas do Nordeste",Cancelado,Paraná
+15,"Refrigerante Cola",5.0000,bebida,18,"Bebidas Premium",Cancelado,"Santa Catarina"
+19,"Cerveja Artesanal",15.0000,bebida,42,"Distribuidora Água",Cancelado,Goiânia
+20,"Água de Coco",6.5000,bebida,10,"Distribuidora de Bebidas",Cancelado,Goiânia
+14,"Café Premium",22.0000,bebida,43,"Eletrônicos Baratos","Em trânsito","Santa Catarina"
+18,"Vinho Tinto Seco",45.0000,bebida,29,"Música Express",Obstruído,"Rio Grande do Sul"
+13,"Suco de Laranja",8.0000,bebida,26,"Sucos Naturais","Em trânsito","São Paulo"
+12,"Água Mineral",2.5000,bebida,45,"Violões & Guitarras","Em trânsito","Santa Catarina"
+2,"Bolo de Cenoura",25.0000,confeitaria,28,"AutoCenter Rio",Obstruído,"São Paulo"
+3,"Pão de Mel",8.5000,confeitaria,50,"Bebidas Artesanais",Obstruído,"São Paulo"
+7,Macaron,9.9000,confeitaria,41,"Bolos da Maria",Obstruído,"São Paulo"
+5,"Torta de Limão",18.0000,confeitaria,38,"Camping Adventure","Em processamento",Goiânia
+9,"Bolo de Pote",15.0000,confeitaria,33,"Confeitaria Mineira",Entregue,"Minas Gerais"
+8,"Pudim de Leite",12.0000,confeitaria,9,"Confeitaria Top",Obstruído,Acre
+4,"Brigadeiro Gourmet",3.5000,confeitaria,10,"Distribuidora de Bebidas","Em trânsito","Rio Grande do Sul"
+6,Donut,6.9000,confeitaria,17,"Doces da Vovó","Em trânsito","São Paulo"
+1,Cupcake,2.0000,confeitaria,3,"Eletrônicos Silva","Em trânsito",Goiânia
+10,Croissant,7.5000,confeitaria,25,"Padaria do João",Entregue,"Minas Gerais"
+39,"Mouse Gamer",349.0000,eletrônicos,27,"Casa Eletrônica",Entregue,"Rio Grande do Sul"
+30,"Caixa de Som Bluetooth",349.9000,eletrônicos,27,"Casa Eletrônica","Em trânsito","Espirito Santo"
+24,ATH-M40x,689.9000,eletrônicos,27,"Casa Eletrônica",Obstruído,"Rio Grande do Sul"
+34,"Impressora Multifuncional",699.0000,eletrônicos,27,"Casa Eletrônica",Cancelado,"Santa Catarina"
+40,"Projetor Mini",899.0000,eletrônicos,43,"Eletrônicos Baratos","Em trânsito","Rio Grande do Sul"
+26,"Smart TV 50",2199.0000,eletrônicos,43,"Eletrônicos Baratos","Em processamento",Paraná
+37,"Carregador Portátil",199.0000,eletrônicos,19,EletroShop,Obstruído,"Espirito Santo"
+29,"Roteador Wi-Fi 6",499.0000,eletrônicos,19,EletroShop,"Em trânsito",Acre
+22,"SONY IPX-201",1499.9900,eletrônicos,19,EletroShop,"Em trânsito","Santa Catarina"
+32,"Drone DJI Mini",1899.0000,eletrônicos,19,EletroShop,"Em trânsito","Santa Catarina"
+23,"KZ P2-E44",99.9900,eletrônicos,35,"Gamer Tech","Em processamento",Goiânia
+38,"Teclado Mecânico",449.0000,eletrônicos,35,"Gamer Tech","Em trânsito",Acre
+33,"Console Portátil",599.0000,eletrônicos,35,"Gamer Tech","Em processamento","São Paulo"
+28,"Smartwatch Pro",799.9000,eletrônicos,35,"Gamer Tech",Obstruído,"Minas Gerais"
+35,"Disco SSD 1TB",399.0000,eletrônicos,7,"Moda Bella","Em trânsito","São Paulo"
+25,"Tablet Samsung",1299.0000,eletrônicos,7,"Moda Bella",Cancelado,"São Paulo"
+36,"Webcam Full HD",299.0000,eletrônicos,11,"Tech Gadgets",Entregue,Goiânia
+31,"Monitor Gamer",1499.9000,eletrônicos,11,"Tech Gadgets",Cancelado,Paraná
+21,"Xiaomi C13",2999.0000,eletrônicos,11,"Tech Gadgets",Obstruído,Goiânia
+27,"Notebook Ultrafino",3499.0000,eletrônicos,11,"Tech Gadgets",Cancelado,Goiânia
+89,"Camisa Dry Fit",89.9000,esportes,22,"Academia Store",Entregue,"Santa Catarina"
+83,"Mochila Hidratação",149.0000,esportes,22,"Academia Store",Cancelado,Acre
+77,"Raquete de Tênis",499.9900,esportes,22,"Academia Store",Cancelado,"Santa Catarina"
+79,"Smartwatch Fit",299.9900,esportes,14,"Artigos Esportivos",Obstruído,Acre
+85,"Halteres Ajustáveis",349.0000,esportes,14,"Artigos Esportivos",Obstruído,"São Paulo"
+90,"Joelheira Protetora",59.9000,esportes,38,"Camping Adventure",Entregue,"São Paulo"
+78,"Short Fitness",89.9900,esportes,38,"Camping Adventure","Em trânsito",Acre
+84,"Colchonete Yoga",99.9000,esportes,38,"Camping Adventure","Em processamento","Santa Catarina"
+86,"Bola de Futebol",129.9000,esportes,30,"Esporte Total",Entregue,"Minas Gerais"
+80,"Bicicleta Ergométrica",1899.0000,esportes,30,"Esporte Total","Em processamento","Espirito Santo"
+88,"Corda Pular",45.0000,esportes,6,"Esportes Radicais",Cancelado,Acre
+76,"Tênis Esportivo",199.9000,esportes,6,"Esportes Radicais",Cancelado,"Rio Grande do Sul"
+82,"Esteira Elétrica",3999.0000,esportes,6,"Esportes Radicais",Obstruído,"Santa Catarina"
+87,"Óculos Natação",79.0000,esportes,46,"Futebol Store",Obstruído,"Minas Gerais"
+81,"Luva de Boxe",219.0000,esportes,46,"Futebol Store","Em trânsito",Acre
+114,"Touca Tricô",35.0000,moda,15,"Boutique Fashion",Obstruído,"Santa Catarina"
+104,"Cinto Couro",59.9000,moda,15,"Boutique Fashion","Em trânsito",Paraná
+109,"Cachecol Lã",89.0000,moda,15,"Boutique Fashion",Cancelado,"Espirito Santo"
+99,"Blusa Moletom",99.9000,moda,15,"Boutique Fashion",Obstruído,Paraná
+119,"Polo Masculina",129.0000,moda,15,"Boutique Fashion",Obstruído,"Rio Grande do Sul"
+94,"Camisa Básica",129.9000,moda,15,"Boutique Fashion","Em processamento","Espirito Santo"
+91,"Camisa Social",49.9900,moda,7,"Moda Bella",Cancelado,Acre
+116,"Calça Legging",79.0000,moda,7,"Moda Bella",Cancelado,"Minas Gerais"
+96,"Vestido Floral",89.9000,moda,7,"Moda Bella","Em trânsito",Goiânia
+111,"Macaquinho Verão",119.0000,moda,7,"Moda Bella","Em processamento",Acre
+101,"Sandália Plataforma",129.0000,moda,7,"Moda Bella",Entregue,"Espirito Santo"
+106,"Bolsa Tote",149.0000,moda,7,"Moda Bella",Obstruído,"São Paulo"
+105,"Meia Esportiva",29.9000,moda,31,"Moda Feminina",Cancelado,Paraná
+95,"Calça Jeans",39.9000,moda,31,"Moda Feminina",Cancelado,Paraná
+110,"Boné Aba Reta",49.9000,moda,31,"Moda Feminina",Obstruído,"Espirito Santo"
+100,"Shorts Jeans",69.9000,moda,31,"Moda Feminina","Em processamento","Rio Grande do Sul"
+115,"Sutiã Esportivo",89.9000,moda,31,"Moda Feminina","Em processamento",Acre
+120,"Mochila Executiva",199.0000,moda,31,"Moda Feminina",Obstruído,"Espirito Santo"
+112,"Cueca Boxer",69.9000,moda,23,"Moda Jovem",Entregue,Acre
+92,"Jaqueta Jeans",99.9900,moda,23,"Moda Jovem","Em trânsito","Santa Catarina"
+117,"Blusa de Renda",109.0000,moda,23,"Moda Jovem",Cancelado,"São Paulo"
+102,"Blazer Slim",199.0000,moda,23,"Moda Jovem",Obstruído,Acre
+97,"Jaqueta de Couro",249.9000,moda,23,"Moda Jovem",Cancelado,Acre
+107,"Sapato Social",289.0000,moda,23,"Moda Jovem","Em processamento","São Paulo"
+108,"Regata Algodão",39.9000,moda,39,"Moda Masculina","Em trânsito","Rio Grande do Sul"
+113,"Body Infantil",39.9000,moda,39,"Moda Masculina","Em trânsito","Rio Grande do Sul"
+118,"Cinto Feminino",45.0000,moda,39,"Moda Masculina",Entregue,Acre
+103,"Pijama Conforto",79.9000,moda,39,"Moda Masculina",Obstruído,Goiânia
+98,"Tênis Casual",159.9000,moda,39,"Moda Masculina",Cancelado,"São Paulo"
+93,"Blusa Oversized",159.9900,moda,39,"Moda Masculina","Em processamento","São Paulo"
+69,"Pedal Distorção",349.0000,musicais,13,"Instrumentos Musicais","Em processamento",Paraná
+64,"Bateria Yamaha EB13",1299.9000,musicais,13,"Instrumentos Musicais","Em processamento","São Paulo"
+74,"Saxofone Alto",2899.0000,musicais,13,"Instrumentos Musicais","Em processamento",Acre
+72,"Palhetas Diversas",19.9000,musicais,21,"Loja de Instrumentos",Cancelado,"Santa Catarina"
+62,"Teclado Yamaha E631",499.9900,musicais,21,"Loja de Instrumentos",Cancelado,Goiânia
+67,"Baixo Elétrico",1199.0000,musicais,21,"Loja de Instrumentos",Cancelado,"Minas Gerais"
+71,"Amplificador 30W",699.0000,musicais,5,"Música & Cia",Obstruído,"Minas Gerais"
+61,"Violão Gemini KLSS",799.9900,musicais,5,"Música & Cia",Obstruído,"Rio Grande do Sul"
+66,"Microfone Shure MV7",1470.0000,musicais,5,"Música & Cia",Cancelado,"São Paulo"
+70,"Metrônomo Digital",189.0000,musicais,29,"Música Express",Obstruído,Acre
+65,"Microfone Logitech Blue Yeti",499.9000,musicais,29,"Música Express",Cancelado,"Espirito Santo"
+75,"Piano Digital",4599.0000,musicais,29,"Música Express",Obstruído,"Rio Grande do Sul"
+73,"Flauta Doce",89.0000,musicais,37,"Som Profissional",Entregue,"São Paulo"
+68,"Ukulele Soprano",299.0000,musicais,37,"Som Profissional","Em trânsito","Minas Gerais"
+63,"Guitarra Startocaster EG101",899.9000,musicais,37,"Som Profissional",Obstruído,"Minas Gerais"

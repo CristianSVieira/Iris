@@ -1,0 +1,734 @@
+[
+    {
+        "id": "4bd8fa85fb287fc9",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "53c62b520e618d15",
+        "type": "mysql",
+        "z": "4bd8fa85fb287fc9",
+        "mydb": "a9ef35e3b5bf71a5",
+        "name": "Iris Database",
+        "x": 730,
+        "y": 380,
+        "wires": [
+            [
+                "43aaf614026d74a5"
+            ]
+        ]
+    },
+    {
+        "id": "b236b12710ff4d99",
+        "type": "inject",
+        "z": "4bd8fa85fb287fc9",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 300,
+        "y": 380,
+        "wires": [
+            [
+                "38df04b537d5e251"
+            ]
+        ]
+    },
+    {
+        "id": "43aaf614026d74a5",
+        "type": "debug",
+        "z": "4bd8fa85fb287fc9",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "3ddca73a3be6ed75",
+        "type": "inject",
+        "z": "4bd8fa85fb287fc9",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 300,
+        "y": 280,
+        "wires": [
+            [
+                "d0741adef5560170"
+            ]
+        ]
+    },
+    {
+        "id": "d0741adef5560170",
+        "type": "function",
+        "z": "4bd8fa85fb287fc9",
+        "name": "function 1",
+        "func": "msg.topic = `\n    drop database if exists iris_;\n    \n    create database iris_;\n    use iris_;\n\n    create table product(\n        product_id int not null primary key auto_increment,\n        product_category tinytext not null,\n        product_title tinytext not null,\n        product_description text not null,\n        product_price decimal(19,4) null,\n        product_inventory int null\n    );\n`;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 280,
+        "wires": [
+            [
+                "14dd82dc1975c74b"
+            ]
+        ]
+    },
+    {
+        "id": "14dd82dc1975c74b",
+        "type": "mysql",
+        "z": "4bd8fa85fb287fc9",
+        "mydb": "a9ef35e3b5bf71a5",
+        "name": "Iris Database",
+        "x": 730,
+        "y": 280,
+        "wires": [
+            [
+                "733af84337ae3c39"
+            ]
+        ]
+    },
+    {
+        "id": "e909bf17874896d8",
+        "type": "comment",
+        "z": "4bd8fa85fb287fc9",
+        "name": "RUN THIS FIRST - SETUP",
+        "info": "Creates a new database with a single \nindependent table.",
+        "x": 350,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "733af84337ae3c39",
+        "type": "debug",
+        "z": "4bd8fa85fb287fc9",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "38df04b537d5e251",
+        "type": "function",
+        "z": "4bd8fa85fb287fc9",
+        "name": "function 2",
+        "func": "msg.topic = `\n    select * from product;\n`;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 380,
+        "wires": [
+            [
+                "53c62b520e618d15"
+            ]
+        ]
+    },
+    {
+        "id": "67852bf86b251afc",
+        "type": "ui_form",
+        "z": "4bd8fa85fb287fc9",
+        "name": "Formulário Inserir",
+        "label": "Formulário de dados",
+        "group": "4d0e9739d7129d07",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Product Category",
+                "value": "product_category",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Product Tittle",
+                "value": "product_title",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Product Description",
+                "value": "product_description",
+                "type": "text",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "Product Price",
+                "value": "product_price",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Product Inventory",
+                "value": "product_inventory",
+                "type": "number",
+                "required": false,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "product_category": "",
+            "product_title": "",
+            "product_description": "",
+            "product_price": "",
+            "product_inventory": ""
+        },
+        "payload": "",
+        "submit": "Enviar",
+        "cancel": "Cancelar",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 330,
+        "y": 560,
+        "wires": [
+            [
+                "4bed9ad077e2e59c",
+                "c2ca84760ca22c8b"
+            ]
+        ]
+    },
+    {
+        "id": "3c4758a1f71f4067",
+        "type": "ui_form",
+        "z": "4bd8fa85fb287fc9",
+        "name": "Formulário Deleção",
+        "label": "Formulário deletar dados",
+        "group": "d560f324307ca509",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "ID",
+                "value": "product_id",
+                "type": "number",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "product_id": ""
+        },
+        "payload": "",
+        "submit": "Enviar",
+        "cancel": "Cancelar",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 330,
+        "y": 620,
+        "wires": [
+            [
+                "9b4e682dda5062c2"
+            ]
+        ]
+    },
+    {
+        "id": "e1f9b653849fffce",
+        "type": "ui_form",
+        "z": "4bd8fa85fb287fc9",
+        "name": "Formulário Atualização",
+        "label": "Formulário para Update",
+        "group": "59d5783035200247",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Product ID",
+                "value": "product_id",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Product Category",
+                "value": "product_category",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Product Tittle",
+                "value": "product_title",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Product Description",
+                "value": "product_description",
+                "type": "text",
+                "required": false,
+                "rows": null
+            },
+            {
+                "label": "Product Price",
+                "value": "product_price",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Product Inventory",
+                "value": "product_inventory",
+                "type": "number",
+                "required": false,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "product_id": "",
+            "product_category": "",
+            "product_title": "",
+            "product_description": "",
+            "product_price": "",
+            "product_inventory": ""
+        },
+        "payload": "",
+        "submit": "Enviar",
+        "cancel": "Cancelar",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 340,
+        "y": 740,
+        "wires": [
+            [
+                "5f9818440de95d2c"
+            ]
+        ]
+    },
+    {
+        "id": "7ba698ae9f674fe3",
+        "type": "ui_template",
+        "z": "4bd8fa85fb287fc9",
+        "group": "277cd31ec47d07e5",
+        "name": "",
+        "order": 2,
+        "width": "10",
+        "height": "10",
+        "format": "<style>\n    table {\n        background-color: lightgray;\n\n        border-radius: 8px;\n\n        display: flex;\n        align-items: center;\n        justify-content: center;\n        text-align: center;\n\n        width: 100%;\n    }\n\n</style>\n\n<div ng-bind-html=\"msg.payload\"></div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1400,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "34cfefda1c905da1",
+        "type": "mysql",
+        "z": "4bd8fa85fb287fc9",
+        "mydb": "a9ef35e3b5bf71a5",
+        "name": "Iris Database",
+        "x": 970,
+        "y": 560,
+        "wires": [
+            [
+                "2942155749e9a08c"
+            ]
+        ]
+    },
+    {
+        "id": "c2ca84760ca22c8b",
+        "type": "function",
+        "z": "4bd8fa85fb287fc9",
+        "name": "function 3",
+        "func": "msg.topic = `\n    insert into product\n    (\n        product_category,\n        product_title,\n        product_description,\n        product_price,\n        product_inventory\n    )\n    values\n    (\n        '${msg.payload.product_category}', \n        '${msg.payload.product_title}', \n        '${msg.payload.product_description}', \n        ${msg.payload.product_price},\n        ${msg.payload.product_inventory}\n    )\n    ;\n`;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 560,
+        "wires": [
+            [
+                "34cfefda1c905da1"
+            ]
+        ]
+    },
+    {
+        "id": "9b4e682dda5062c2",
+        "type": "function",
+        "z": "4bd8fa85fb287fc9",
+        "name": "function 4",
+        "func": "msg.topic = `\n    delete from product\n    where product_id=${msg.payload.product_id}\n    ;\n`;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 620,
+        "wires": [
+            [
+                "9a6f41fa27e3893a"
+            ]
+        ]
+    },
+    {
+        "id": "c3be3b23a36df7ac",
+        "type": "function",
+        "z": "4bd8fa85fb287fc9",
+        "name": "function 5",
+        "func": "msg.topic = `select * from product;`;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 680,
+        "wires": [
+            [
+                "f2f8cd7d0b6138c7"
+            ]
+        ]
+    },
+    {
+        "id": "5f9818440de95d2c",
+        "type": "function",
+        "z": "4bd8fa85fb287fc9",
+        "name": "function 6",
+        "func": "msg.topic = `\n    update product set\n    product_category = '${msg.payload.product_category}',\n    product_title = '${msg.payload.product_title}',\n    product_description = '${msg.payload.product_description}',\n    product_price = ${msg.payload.product_price},\n    product_inventory = ${msg.payload.product_inventory}\n\n    where product_id=${msg.payload.product_id}\n`;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 740,
+        "wires": [
+            [
+                "9c33fcea4946c207"
+            ]
+        ]
+    },
+    {
+        "id": "82b610e1760035aa",
+        "type": "comment",
+        "z": "4bd8fa85fb287fc9",
+        "name": "CON TEST",
+        "info": "Check if database is working",
+        "x": 310,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "4bed9ad077e2e59c",
+        "type": "debug",
+        "z": "4bd8fa85fb287fc9",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "43998e13d563a482",
+        "type": "ui_button",
+        "z": "4bd8fa85fb287fc9",
+        "name": "",
+        "group": "277cd31ec47d07e5",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Atualizar Lista",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 320,
+        "y": 680,
+        "wires": [
+            [
+                "c3be3b23a36df7ac"
+            ]
+        ]
+    },
+    {
+        "id": "f2f8cd7d0b6138c7",
+        "type": "mysql",
+        "z": "4bd8fa85fb287fc9",
+        "mydb": "a9ef35e3b5bf71a5",
+        "name": "Iris Database",
+        "x": 970,
+        "y": 680,
+        "wires": [
+            [
+                "b02fd1c85b027301",
+                "63e7442cbde0be49"
+            ]
+        ]
+    },
+    {
+        "id": "b02fd1c85b027301",
+        "type": "debug",
+        "z": "4bd8fa85fb287fc9",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1220,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "63e7442cbde0be49",
+        "type": "function",
+        "z": "4bd8fa85fb287fc9",
+        "name": "function 7",
+        "func": "    let _html = `\n    <table class='table'>\n        <tr>\n            <th>ID</th>\n            <th>Categoria</th>\n            <th>Título</th>\n            <th>Descrição</th>\n            <th>Preço</th>\n            <th>Inventário</th>\n        </tr>\n    `;\n        \n    for (let index = 0; index < msg.payload.length; ++index) {\n        let data = msg.payload[index];\n        console.log(data);\n        _html += \"<tr>\"\n        _html += \n        `\n        <td>${data.product_id}</td>\n        <td>${data.product_category}</td>\n        <td>${data.product_title}</td>\n        <td>${data.product_description}</td>\n        <td>${data.product_price}</td>\n        <td>${data.product_inventory}</td>\n        `\n        _html += \"</tr>\"\n    }\n\n    _html += \"</table>\";\n\n    msg.payload = _html;\n    \nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1220,
+        "y": 680,
+        "wires": [
+            [
+                "7ba698ae9f674fe3"
+            ]
+        ]
+    },
+    {
+        "id": "9c33fcea4946c207",
+        "type": "mysql",
+        "z": "4bd8fa85fb287fc9",
+        "mydb": "a9ef35e3b5bf71a5",
+        "name": "Iris Database",
+        "x": 970,
+        "y": 740,
+        "wires": [
+            [
+                "65d868a4a997040d"
+            ]
+        ]
+    },
+    {
+        "id": "9a6f41fa27e3893a",
+        "type": "mysql",
+        "z": "4bd8fa85fb287fc9",
+        "mydb": "a9ef35e3b5bf71a5",
+        "name": "Iris Database",
+        "x": 970,
+        "y": 620,
+        "wires": [
+            [
+                "328c56f75be06769"
+            ]
+        ]
+    },
+    {
+        "id": "65d868a4a997040d",
+        "type": "debug",
+        "z": "4bd8fa85fb287fc9",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1220,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "2942155749e9a08c",
+        "type": "debug",
+        "z": "4bd8fa85fb287fc9",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1220,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "328c56f75be06769",
+        "type": "debug",
+        "z": "4bd8fa85fb287fc9",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1220,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "a4d8375d23f5f651",
+        "type": "comment",
+        "z": "4bd8fa85fb287fc9",
+        "name": "Functions",
+        "info": "Requested Functions",
+        "x": 300,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "a9ef35e3b5bf71a5",
+        "type": "MySQLdatabase",
+        "name": "Iris_",
+        "host": "localhost",
+        "port": "3306",
+        "db": "iris_",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "4d0e9739d7129d07",
+        "type": "ui_group",
+        "name": "Inserir Dados",
+        "tab": "5763ef3b139b6cd7",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d560f324307ca509",
+        "type": "ui_group",
+        "name": "Deletar Dados",
+        "tab": "5763ef3b139b6cd7",
+        "order": 2,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "59d5783035200247",
+        "type": "ui_group",
+        "name": "Atualizar Dados",
+        "tab": "5763ef3b139b6cd7",
+        "order": 4,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "277cd31ec47d07e5",
+        "type": "ui_group",
+        "name": "Seleccionar Dados",
+        "tab": "5763ef3b139b6cd7",
+        "order": 3,
+        "disp": true,
+        "width": "10",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "5763ef3b139b6cd7",
+        "type": "ui_tab",
+        "name": "IRIS",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
