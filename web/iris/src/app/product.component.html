@@ -1,0 +1,15 @@
+<div class="product__images">
+    <img class="product__image" src="{{ imagePath }}" />
+</div>
+
+<div class="product__header">
+    <span class="product__title">{{ title }}</span>
+    <span class="product__price">{{ price }}</span>
+    <div class="product__accentColor" [style.backgroundColor]="headerColor"></div>
+    
+    <span class="product__location">{{ location }}</span>
+</div>
+
+
+
+<router-outlet></router-outlet>
